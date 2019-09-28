@@ -1,0 +1,29 @@
+# Pythono3 code to rename multiple  
+# files in a directory or folder 
+  
+# importing os module 
+import os 
+  
+# Function to rename multiple files 
+def rename_files(): 
+    i = o
+     # (1) get current working directory
+    saved_path = os.getcwd()
+    
+    # (2) change the current directory to specified directory 
+    os.chdir(r"location\of\a\new\directory")
+    
+     # (3) get file name from a folder
+    file_list  = os.listdir(r"location\of\a\new\directory")
+    
+     # (4) for each file rename filename    
+    for filename in file_list:
+        dst ="any_name you_want" + str(i) + ".jpg"
+        src = filename  
+     # (5) rename() function will  rename all the files. src = old name , dst = new name 
+        os.rename(src, dst)
+        i += 1 
+    os.chdir(saved_path)
+    
+rename_files()
+
